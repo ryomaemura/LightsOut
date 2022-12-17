@@ -479,12 +479,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -613,12 +613,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 13
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1287,12 +1287,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
+          m_IntArgument: 16
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1371,7 +1371,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19607843, g: 0.3137255, b: 0.50980395, a: 0}
+  m_BackGroundColor: {r: 0.6666667, g: 0.3529412, b: 0.47058824, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1707,12 +1707,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2246,12 +2246,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2380,12 +2380,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2514,12 +2514,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3053,12 +3053,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3146,23 +3146,7 @@ MonoBehaviour:
   button14: {fileID: 1314463107}
   button15: {fileID: 1786977243}
   button16: {fileID: 494712035}
-  buttonText1: {fileID: 124474539}
-  buttonText2: {fileID: 1452315410}
-  buttonText3: {fileID: 1428532625}
-  buttonText4: {fileID: 1811040886}
-  buttonText5: {fileID: 372365315}
-  buttonText6: {fileID: 237863028}
-  buttonText7: {fileID: 1904561221}
-  buttonText8: {fileID: 584619955}
-  buttonText9: {fileID: 1124711093}
-  buttonText10: {fileID: 211415183}
-  buttonText11: {fileID: 302363483}
-  buttonText12: {fileID: 1869651218}
-  buttonText13: {fileID: 2023781306}
-  buttonText14: {fileID: 913996821}
-  buttonText15: {fileID: 1502472268}
-  buttonText16: {fileID: 127629255}
-  moveText: {fileID: 975870579}
+  scoreLabel: {fileID: 975870579}
 --- !u!4 &1644653542
 Transform:
   m_ObjectHideFlags: 0
@@ -3517,12 +3501,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3651,12 +3635,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3785,12 +3769,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 11
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3919,12 +3903,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 14
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4188,12 +4172,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4592,12 +4576,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4861,12 +4845,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4995,7 +4979,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: resetNumber
+        m_MethodName: resetLights
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5129,12 +5113,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644653541}
         m_TargetAssemblyTypeName: NumberManager, Assembly-CSharp
-        m_MethodName: clickNumberButton
+        m_MethodName: clickButton
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

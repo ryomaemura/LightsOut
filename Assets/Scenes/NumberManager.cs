@@ -24,26 +24,9 @@ public class NumberManager : MonoBehaviour
     [SerializeField] Button button15;
     [SerializeField] Button button16;
     Button[] buttons;
-    [SerializeField] TextMeshProUGUI buttonText1;
-    [SerializeField] TextMeshProUGUI buttonText2;
-    [SerializeField] TextMeshProUGUI buttonText3;
-    [SerializeField] TextMeshProUGUI buttonText4;
-    [SerializeField] TextMeshProUGUI buttonText5;
-    [SerializeField] TextMeshProUGUI buttonText6;
-    [SerializeField] TextMeshProUGUI buttonText7;
-    [SerializeField] TextMeshProUGUI buttonText8;
-    [SerializeField] TextMeshProUGUI buttonText9;
-    [SerializeField] TextMeshProUGUI buttonText10;
-    [SerializeField] TextMeshProUGUI buttonText11;
-    [SerializeField] TextMeshProUGUI buttonText12;
-    [SerializeField] TextMeshProUGUI buttonText13;
-    [SerializeField] TextMeshProUGUI buttonText14;
-    [SerializeField] TextMeshProUGUI buttonText15;
-    [SerializeField] TextMeshProUGUI buttonText16;
-    TextMeshProUGUI[] buttonTexts;
-    [SerializeField] TextMeshProUGUI moveText;
-    int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0};
-    int[] answerNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0};
+    [SerializeField] TextMeshProUGUI scoreLabel;
+    int[] numbers = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    // int[] answerNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0};
     int[,] relasionshipNumbers = {
         {0, 1, 0, 0,   1, 0, 0, 0,   0, 0, 0, 0,   0, 0, 0, 0},
         {1, 0, 1, 0,   0, 1, 0, 0,   0, 0, 0, 0,   0, 0, 0, 0},
@@ -66,63 +49,83 @@ public class NumberManager : MonoBehaviour
         {0, 0, 0, 0,   0, 0, 0, 0,   0, 0, 0, 1,   0, 0, 1, 0},
     };
     int randomNumber = 0;
-    int tempNumber = 0;
-    int moveNumber = 0;
+    // int tempNumber = 0;
+    // int moveNumber = 0;
+    int scoreNumber = 0;
 
     // Start is called before the first frame update
     void Start() {
         buttons = new Button[] {button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16};
-        buttonTexts = new TextMeshProUGUI[] {buttonText1, buttonText2, buttonText3, buttonText4, buttonText5, buttonText6, buttonText7, buttonText8, buttonText9, buttonText10, buttonText11, buttonText12, buttonText13, buttonText14, buttonText15, buttonText16};
 
-        resetNumber();
+        resetLights();
+        scoreReload();
     }
 
     // Update is called once per frame
     void Update() {
     }
 
-    public void resetNumber() {
+    public void clickButton(int number) {
+        if (numbers[number - 1] == 1) {
+            buttons[number - 1].GetComponent<Image>().color = new Color32(100, 0, 200, 255);
+            numbers[number - 1] = 0;
+        } else if (numbers[number - 1] == 0) {
+            buttons[number - 1].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            numbers[number - 1] = 1;
+        }
+
+        scoreNumber = scoreNumber + 1;
+        scoreReload();
+
         for (int i = 0; i < numbers.Length; i++) {
-            numbers[i] = i + 1;
+            if (relasionshipNumbers[number - 1, i] == 1 && numbers[i] == 1) {
+                buttons[i].GetComponent<Image>().color = new Color32(100, 0, 200, 255);
+                numbers[i] = 0;
+            } else if (relasionshipNumbers[number - 1, i] == 1 && numbers[i] == 0) {
+                buttons[i].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                numbers[i] = 1;
+            }
+        }
+    }
+
+    public void resetLights() {
+        for (int i = 0; i < numbers.Length; i++) {
             buttons[i].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            numbers[i] = 1;
         }
 
-        numbers[numbers.Length - 1] = 0;
-
-        for (int i = 0; i < 500; i++) {
-            // output 0 ~ numbers.length - 1 (15)
-            randomNumber = UnityEngine.Random.Range(0, numbers.Length);
-
-            clickNumberButton(randomNumber);
-        }
-
-        moveNumber = 0;
-        moveText.text = "Move:0";
-    }
-
-    public void setNumbers() {
         for (int i = 0; i < numbers.Length; i++) {
-            buttonTexts[i].text = numbers[i].ToString();
+            // output 0 ~ 1
+            randomNumber = UnityEngine.Random.Range(0, 2);
 
-            if (numbers[i] == 0) {
-                buttonTexts[i].text = "";
+            if (randomNumber == 1 && numbers[i] == 1) {
+                buttons[i].GetComponent<Image>().color = new Color32(100, 0, 200, 255);
+                numbers[i] = 0;
+            } else if (randomNumber == 1 && numbers[i] == 0) {
+                buttons[i].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                numbers[i] = 1;
             }
-        }
-    }
 
-    public void clickNumberButton(int buttonNumber) {
-        for (int i = 0; i < numbers.Length; i++) {
-            if (relasionshipNumbers[buttonNumber, i] == 1 && numbers[i] == 0) {
-                tempNumber = numbers[buttonNumber];
-                numbers[buttonNumber] = numbers[i];
-                numbers[i] = tempNumber;
-
-                moveNumber++;
+            if (randomNumber == 1) {
+                for (int j = 0; j < numbers.Length; j++) {
+                    if (relasionshipNumbers[i, j] == 1) {
+                        if (numbers[j] == 1) {
+                            buttons[j].GetComponent<Image>().color = new Color32(100, 0, 200, 255);
+                            numbers[j] = 0;
+                        } else if (numbers[j] == 0) {
+                            buttons[j].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                            numbers[j] = 1;
+                        }
+                    }
+                }
             }
         }
 
-        setNumbers();
+        scoreNumber = 0;
+        scoreReload();
+    }
 
-        moveText.text = "Move:" + moveNumber.ToString();
+    public void scoreReload() {
+        scoreLabel.text = "Move:" + scoreNumber.ToString();
     }
 }
